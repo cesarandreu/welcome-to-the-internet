@@ -10,6 +10,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(express.favicon(__dirname + '/public/img/favicon.ico'));
 
 app.configure('production', function() {
     app.use(express.compress());
