@@ -13,5 +13,9 @@ body {
     text-align: center;
     font-size: 50px;
     color: #FFFFFF;
-    text-shadow: 0 0 10px #00BB00;
+    text-shadow: 0 0 5px #00BB00;
+}
+.github-btn{
+    position:absolute;
+    padding: 0.5em 0.5em;
 }
