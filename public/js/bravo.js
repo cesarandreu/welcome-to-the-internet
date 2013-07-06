@@ -8,16 +8,14 @@ var camera,
 
 function start () {
 
-    var loader = new THREE.ColladaLoader();
-    loader.options.convertUpAxis = true;
+    var loader = new THREE.JSONLoader();
 
-    loader.load('/assets/models/bravo1.dae', function(collada) {
-        bravo = collada.scene;
-
-        bravo.scale.x = bravo.scale.y = bravo.scale.z = 25.0;
+    loader.load('/assets/models/bravo1.js', function(geometry, materials) {
+        var material = new THREE.MeshFaceMaterial( materials );
+        bravo = new THREE.Mesh(geometry, material);
+        bravo.scale.set(20,20,20);
 
         init();
-
         animate();
 
     });
