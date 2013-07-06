@@ -1,15 +1,17 @@
 !!!
 head
     meta(charset='utf-8')
+    title Welcome to the internet.
     meta(name='title', content='Welcome to the internet.')
     meta(name='description', content='Page welcoming users to the internet.')
-    link(rel='image_src', href='/img/preview.png')    
+    meta(property='og:title', content='Welcome to the internet.')        
+    meta(property='og:description', content='Page welcoming users to the internet.')
+    meta(property='og:image', content='/img/preview.png')
     meta(name='viewport', content='width=device-width')
-    title Welcome to the internet.
-    link(rel='stylesheet', href='/css/style.css')
     link(rel='icon', type="image/ico", href="/img/favicon.ico")
+    link(rel='image_src', href='/img/preview.png')            
+    link(rel='stylesheet', href='/css/style.css')
 body
-    - //iframe(src="http://ghbtns.com/github-btn.html?user=cesarandreu&repo=welcome-to-the-internet&type=star&count=true", allowtransparency="true", frameborder="0", scrolling="0", width="62", height="20")
     .buttons
         iframe(src="http://ghbtns.com/github-btn.html?user=cesarandreu&type=follow", allowtransparency="true", frameborder="0", scrolling="0", width="150", height="20")
         iframe(src="http://ghbtns.com/github-btn.html?user=cesarandreu&repo=welcome-to-the-internet&type=watch", allowtransparency="true", frameborder="0", scrolling="0", width="58", height="20")
