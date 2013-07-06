@@ -21,7 +21,7 @@ function init () {
 
     makeCubes();
 
-    setInterval(update, 1000/30);
+    setInterval(update, 1000/60);
 
 }
 
@@ -65,7 +65,7 @@ function updateCubes () {
     var cube;
     for (var i = 0; i<cubes.length; i++) {
         cube = cubes[i];
-        cube.position.z += 75;
+        cube.position.z += 50;
 
         if (cube.position.z > 1000) {
             cube.position.x = randomRange(-1000, 1000);
