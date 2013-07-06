@@ -28,6 +28,11 @@ app.configure('development', function() {
 app.get('/', function(req, res) {
   res.render('index');
 });
+
+app.get('/bravo',function(req, res) {
+  res.render('bravo');
+});
+
 app.get('*', function(req, res) {
   res.redirect('/');
 });
