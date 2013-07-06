@@ -14,7 +14,7 @@ app.use(express.favicon(__dirname + '/public/img/favicon.ico'));
 
 app.configure('production', function() {
     app.use(express.compress());
-    app.use(minify());
+    //app.use(minify());
     app.use(express.static(path.join(__dirname, 'public')));
     app.use(app.router);
     app.use(express.errorHandler());

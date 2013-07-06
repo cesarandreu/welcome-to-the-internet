@@ -14,12 +14,9 @@ function start () {
         var material = new THREE.MeshFaceMaterial( materials );
         bravo = new THREE.Mesh(geometry, material);
         bravo.scale.set(20,20,20);
-
         init();
         animate();
-
     });
-
 }
 
 function init () {
