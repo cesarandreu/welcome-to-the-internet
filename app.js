@@ -53,6 +53,13 @@ app.get('/bravo',function(req, res) {
   res.render('bravo', res.responseObject);
 });
 
+app.get('/scaffolding', function(req, res) {
+  res.responseObject.title = 'Scaffolding page.';
+  res.responseObject.description = 'Page with some general scaffolding.';
+
+  res.render('scaffolding', res.responseObject);
+});
+
 //Default route is all else fails.
 app.get('*', function(req, res) {
   res.redirect('/');
