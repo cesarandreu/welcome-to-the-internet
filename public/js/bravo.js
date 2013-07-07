@@ -7,9 +7,7 @@ var camera,
     bravo;
 
 function start () {
-
     var loader = new THREE.JSONLoader();
-
     loader.load('/assets/models/bravo1.js', function(geometry, materials) {
         var material = new THREE.MeshFaceMaterial( materials );
         bravo = new THREE.Mesh(geometry, material);
