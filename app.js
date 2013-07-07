@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Initializes the responseObject that gets rendered
 app.use(function(req, res, next) {
   res.responseObject = {
-    url: app.get('domain'),
+    url: app.get('domain')+req.url,
     title: '',
     description: ''
   };
