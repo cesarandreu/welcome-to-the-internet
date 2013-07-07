@@ -60,6 +60,13 @@ app.get('/scaffolding', function(req, res) {
   res.render('scaffolding', res.responseObject);
 });
 
+app.get('/flying', function(req, res) {
+  res.responseObject.title = 'Flying demo.';
+  res.responseObject.description = 'A demo where you can fly bravo.';
+
+  res.render('flying', res.responseObject);
+});
+
 //Default route is all else fails.
 app.get('*', function(req, res) {
   res.redirect('/');
