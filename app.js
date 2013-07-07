@@ -67,6 +67,13 @@ app.get('/flying', function(req, res) {
   res.render('flying', res.responseObject);
 });
 
+app.get('/flyingWithCamera', function(req, res) {
+  res.responseObject.title = 'Flying demo with chase camera.';
+  res.responseObject.description = 'A demo where you can fly bravo and the camera chases it.';
+
+  res.render('flyingWithCamera', res.responseObject);
+});
+
 //Default route is all else fails.
 app.get('*', function(req, res) {
   res.redirect('/');
